@@ -1,16 +1,16 @@
 dockerized-api-gateway:
-  image: 'maliksaurabh/dockerized-api-gateway:latest'
+  image: 'maliksaurabh/dockerized-api-gateway:dev'
   links:
     - dockerized-eureka-server
     - dockerized-microservice
   ports:
     - '8081:8081'
 dockerized-eureka-server:
-  image: 'maliksaurabh/dockerized-eureka-server:latest'
+  image: 'maliksaurabh/dockerized-eureka-server:dev'
   ports:
     - '8761:8761'
 dockerized-microservice:
-  image: 'maliksaurabh/dockerized-microservice:latest'
+  image: 'maliksaurabh/dockerized-microservice:dev'
   links:
     - dockerized-eureka-server
   ports:
